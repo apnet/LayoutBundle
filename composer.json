@@ -1,0 +1,19 @@
+{
+    "name": "apnet/layout-bundle",
+    "description": "Default layout for all sites",
+    "type": "symfony-bundle",
+    "licence": "proprietary",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.3.0",
+        "components/jquery": "1.9.1",
+        "components/bootstrap": "2.3.2"
+    },
+    "autoload": {
+        "psr-0": { "Apnet\\LayoutBundle": "" }
+    },
+    "target-dir": "Apnet/LayoutBundle",
+    "config": {
+        "bin-dir": "bin"
+    }
+}
