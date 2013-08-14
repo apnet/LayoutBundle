@@ -1,0 +1,38 @@
+{% extends "ApnetLayoutBundle::body.html.twig" %}
+
+{% block body_core %}
+    {% block header_wrapper %}
+        {% block header %}
+            <header>
+                <div class="container">
+                    <div class="row-fluid">
+                        {% block header_core %}{% endblock %}
+                    </div>
+                </div>
+            </header>
+        {% endblock %}
+    {% endblock %}
+
+    {% block content_wrapper %}
+        {% block content %}
+            <div class="container">
+                <div class="row-fluid">
+                    {% block content_core %}{% endblock %}
+                </div>
+                <hr />
+            </div>
+        {% endblock %}
+    {% endblock %}
+
+    {% block footer_wrapper %}
+        {% block footer %}
+            <footer>
+                <div class="container">
+                    <div class="row-fluid">
+                        {% block footer_core %}{% endblock %}
+                    </div>
+                </div>
+            </footer>
+        {% endblock %}
+    {% endblock %}
+{% endblock %}
