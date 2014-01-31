@@ -6,13 +6,19 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/framework-bundle": "~2.3.0",
-        "components/jquery": "1.9.1",
-        "components/bootstrap": "2.3.2"
+        "components/jquery": "1.11.0",
+        "components/bootstrap": "3.0.3",
+        "afarkas/html5shiv": "3.7.0"
     },
     "autoload": {
         "psr-0": { "Apnet\\LayoutBundle": "" }
     },
     "target-dir": "Apnet/LayoutBundle",
+    "extra" : {
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        }
+    },
     "config": {
         "bin-dir": "bin"
     }

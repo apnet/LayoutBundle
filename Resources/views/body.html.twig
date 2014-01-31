@@ -1,44 +1,36 @@
 <!DOCTYPE html>
 <html lang="{% block html_lang %}en{% endblock %}">
-{% block head_wrapper %}
-    <head>
-        {% block head %}
-            {% block head_core %}
-                <meta charset="utf-8"/>
-                <title>{% block title %}{% endblock %}</title>
-                <meta name="viewport" content="{% block meta_viewport %}width=device-width, initial-scale=1.0{% endblock %}"/>
-                <meta name="description" content="{% block meta_description %}{% endblock %}"/>
-                <meta name="keywords" content="{% block meta_keywords %}{% endblock %}"/>
-            {% endblock %}
+{% block head_wrapper %}<head>{% block head %}
+    {% block head_core %}
+        <meta charset="utf-8"/>
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="{% block meta_viewport %}width=device-width, initial-scale=1.0{% endblock %}"/>
+        <meta name="description" content="{% block meta_description %}{% endblock %}"/>
+        <meta name="keywords" content="{% block meta_keywords %}{% endblock %}"/>
+    {% endblock %}
 
-            {% block stylesheets_wrapper %}
-                {% block stylesheets %}
-                    {% block stylesheets_core %}
-                        <link rel="stylesheet" href="{{ asset('components/bootstrap/css/bootstrap.min.css') }}"/>
-                        <link rel="stylesheet" href="{{ asset('components/bootstrap/css/bootstrap-responsive.min.css') }}"/>
-                        <link rel="stylesheet" href="{{ asset('bundles/apnetlayout/css/style.css') }}"/>
-                        <!--[if lt IE 9]><script type="text/javascript" src="{{ asset('bundles/apnetlayout/js/html5shiv.js') }}"></script><![endif]-->
-                    {% endblock %}
-                {% endblock %}
-            {% endblock %}
-        {% endblock %}
-    </head>
-{% endblock %}
-
-{% block body_wrapper %}
-    <body>
-    {% block body %}
-        {% block body_core %}{% endblock %}
-
-        {% block javascripts_wrapper %}
-            {% block javascripts %}
-                {% block javascripts_core %}
-                    <script type="text/javascript" src="{{ asset('components/jquery/jquery.min.js') }}"></script>
-                    <script type="text/javascript" src="{{ asset('components/bootstrap/js/bootstrap.min.js') }}"></script>
-                {% endblock %}
+    {% block stylesheets_wrapper %}
+        {% block stylesheets %}
+            {% block stylesheets_core %}
+                <link rel="stylesheet" href="{{ asset('components/bootstrap/css/bootstrap.min.css') }}"/>
+                <link rel="stylesheet" href="{{ asset('components/bootstrap/css/bootstrap-responsive.min.css') }}"/>
+                <link rel="stylesheet" href="{{ asset('bundles/apnetlayout/css/style.css') }}"/>
+                <!--[if lt IE 9]><script type="text/javascript" src="{{ asset('components/html5shiv/dist/html5shiv.js') }}"></script><![endif]-->
             {% endblock %}
         {% endblock %}
     {% endblock %}
-    </body>
-{% endblock %}
+{% endblock %}</head>{% endblock %}
+
+{% block body_wrapper %}<body>{% block body %}
+    {% block body_core %}{% endblock %}
+
+    {% block javascripts_wrapper %}
+        {% block javascripts %}
+            {% block javascripts_core %}
+                <script type="text/javascript" src="{{ asset('components/jquery/jquery.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('components/bootstrap/js/bootstrap.min.js') }}"></script>
+            {% endblock %}
+        {% endblock %}
+    {% endblock %}
+{% endblock %}</body>{% endblock %}
 </html>
