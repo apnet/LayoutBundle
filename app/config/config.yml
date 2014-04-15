@@ -1,0 +1,49 @@
+imports:
+#    - { resource: parameters.yml }
+    - { resource: services.yml }
+
+monolog:
+    handlers:
+        main:
+            type:         fingers_crossed
+            action_level: error
+            handler:      nested
+        nested:
+            type:  stream
+            path:  %kernel.logs_dir%/%kernel.environment%.log
+            level: debug
+
+framework:
+    test: %kernel.debug%
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+    secret: qwerty
+    profiler:
+        enabled: false
+    templating:
+        engines: ['twig']
+
+# Twig Configuration
+twig:
+    debug: %kernel.debug%
+    strict_variables: %kernel.debug%
+    globals:
+        readme_md: %kernel.root_dir%/../README.md
+
+# Assetic Configuration
+assetic:
+    use_controller: %kernel.debug%
+
+# Apnet AsseticImporter Configuration
+apnet_assetic_importer:
+    assets:
+        demo:
+            source: %kernel.root_dir%/Resources/assets/demo/config.rb
+            target: demo
+            importer: compass
+            watcher: true
+
+# Apnet AsseticWatcher Configuration
+apnet_assetic_watcher:
+    compiler_root: %kernel.root_dir%/Resources
+    enabled: true

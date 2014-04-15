@@ -1,0 +1,12 @@
+{% extends "ApnetLayoutBundle::body.html.twig" %}
+
+{% block body_core %}
+    <div class="container">
+        {{ file_get_contents(readme_md)|raw|markdown }}
+    </div>
+{% endblock %}
+
+{% block stylesheets_core %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ imported_asset('demo/css/style.css') }}"/>
+{% endblock %}

@@ -1,25 +1,37 @@
 {
-    "name": "apnet/layout-bundle",
-    "description": "Default layout for all sites",
-    "type": "symfony-bundle",
-    "licence": "MIT",
-    "require": {
-        "php": ">=5.3.3",
-        "symfony/framework-bundle": "~2.0,>=2.3.0",
-        "components/jquery": "1.11.0",
-        "components/bootstrap": "3.0.3",
-        "afarkas/html5shiv": "3.7.0"
+    "name" : "apnet/layout-bundle",
+    "description" : "Default layout for all sites",
+    "type" : "symfony-bundle",
+    "licence" : "MIT",
+    "require" : {
+        "php" : ">=5.3.3",
+        "symfony/framework-bundle" : "~2.3",
+        "components/jquery" : "1.11.0",
+        "components/bootstrap" : "3.0.3",
+        "afarkas/html5shiv" : "3.7.0"
     },
-    "autoload": {
-        "psr-0": { "Apnet\\LayoutBundle": "" }
+    "autoload" : {
+        "psr-0" : { "Apnet\\" : "src/" }
     },
-    "target-dir": "Apnet/LayoutBundle",
+    "require-dev" : {
+        "symfony/symfony" : "~2.3",
+        "symfony/monolog-bundle" : "~2.3",
+        "apnet/assetic-importer-bundle" : "~1.0",
+        "apnet/functional-test-bundle" : "~1.1,>=1.1.3",
+        "phpunit/phpunit" : "~4.0",
+        "squizlabs/php_codesniffer" : "~1.5",
+        "apnet/coding-standard" : "~1.0",
+        "knplabs/knp-markdown-bundle" : "~1.3"
+    },
     "extra" : {
-        "branch-alias": {
-            "dev-master": "2.x-dev"
+        "symfony-app-dir" : "app",
+        "symfony-web-dir" : "web",
+        "branch-alias" : {
+            "dev-master" : "2.x-dev"
         }
     },
-    "config": {
-        "bin-dir": "bin"
+    "config" : {
+        "bin-dir" : "bin",
+        "component-dir" : "web/components"
     }
 }
