@@ -22,9 +22,13 @@ class AppKernel extends Apnet\FunctionalTestBundle\HttpKernel\AppKernel
     return array(
       new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
       new Symfony\Bundle\TwigBundle\TwigBundle(),
+      new Symfony\Bundle\AsseticBundle\AsseticBundle(),
       new Symfony\Bundle\MonologBundle\MonologBundle(),
 
+      new Apnet\AsseticImporterBundle\ApnetAsseticImporterBundle(),
+      new Apnet\AsseticWatcherBundle\ApnetAsseticWatcherBundle(),
       new Apnet\LayoutBundle\ApnetLayoutBundle(),
+
       new Apnet\FunctionalTestBundle\ApnetFunctionalTestBundle(),
       new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
     );

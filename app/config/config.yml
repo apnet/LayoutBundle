@@ -29,3 +29,21 @@ twig:
     strict_variables: %kernel.debug%
     globals:
         readme_md: %kernel.root_dir%/../README.md
+
+# Assetic Configuration
+assetic:
+    use_controller: %kernel.debug%
+
+# Apnet AsseticImporter Configuration
+apnet_assetic_importer:
+    assets:
+        demo:
+            source: %kernel.root_dir%/Resources/assets/demo/config.rb
+            target: demo
+            importer: compass
+            watcher: true
+
+# Apnet AsseticWatcher Configuration
+apnet_assetic_watcher:
+    compiler_root: %kernel.root_dir%/Resources
+    enabled: true
