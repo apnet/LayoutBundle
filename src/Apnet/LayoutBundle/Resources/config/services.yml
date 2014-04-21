@@ -6,3 +6,11 @@ services:
             - jquery
         tags:
             - { name: apnet.assetic.config_mapper }
+
+    apnet.assetic.importer.html5shiv:
+        parent: assetic.importer_path
+        arguments:
+            - %kernel.root_dir%/../vendor/apnet/html5shiv/app/Resources/assets/dist
+            - html5shiv
+        tags:
+            - { name: apnet.assetic.config_mapper }
