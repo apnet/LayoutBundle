@@ -1,0 +1,32 @@
+services:
+    apnet.assetic.importer.jquery:
+        parent: assetic.importer_path
+        arguments:
+            - %kernel.root_dir%/../vendor/apnet/jquery/app/Resources/assets/dist
+            - jquery
+        tags:
+            - { name: apnet.assetic.config_mapper }
+
+    apnet.assetic.importer.html5shiv:
+        parent: assetic.importer_path
+        arguments:
+            - %kernel.root_dir%/../vendor/apnet/html5shiv/app/Resources/assets/dist
+            - html5shiv
+        tags:
+            - { name: apnet.assetic.config_mapper }
+
+    apnet.assetic.importer.bootstrap_css:
+        parent: assetic.importer_path
+        arguments:
+            - %kernel.root_dir%/../vendor/apnet/bootstrap/app/Resources/assets/stylesheets
+            - bootstrap
+        tags:
+            - { name: apnet.assetic.config_mapper }
+
+    apnet.assetic.importer.bootstrap_js:
+        parent: assetic.importer_path
+        arguments:
+            - %kernel.root_dir%/../vendor/apnet/bootstrap/app/Resources/assets/javascripts
+            - bootstrap
+        tags:
+            - { name: apnet.assetic.config_mapper }
