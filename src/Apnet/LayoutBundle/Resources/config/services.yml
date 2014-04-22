@@ -14,3 +14,19 @@ services:
             - html5shiv
         tags:
             - { name: apnet.assetic.config_mapper }
+
+    apnet.assetic.importer.bootstrap_css:
+        parent: assetic.importer_path
+        arguments:
+            - %kernel.root_dir%/../vendor/apnet/bootstrap/app/Resources/assets/stylesheets
+            - bootstrap
+        tags:
+            - { name: apnet.assetic.config_mapper }
+
+    apnet.assetic.importer.bootstrap_js:
+        parent: assetic.importer_path
+        arguments:
+            - %kernel.root_dir%/../vendor/apnet/bootstrap/app/Resources/assets/javascripts
+            - bootstrap
+        tags:
+            - { name: apnet.assetic.config_mapper }
