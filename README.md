@@ -1,5 +1,7 @@
-Apnet Layout Bundle [![Travis-ci status](https://travis-ci.org/apnet/LayoutBundle.png?branch=master)](https://travis-ci.org/apnet/LayoutBundle/)
+Apnet Layout Bundle
 ===================
+
+[![Travis-ci status](https://travis-ci.org/apnet/LayoutBundle.png?branch=master)](https://travis-ci.org/apnet/LayoutBundle/) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/deebbaed-eaff-46ef-a648-332bdf4cf58a/mini.png)](https://insight.sensiolabs.com/projects/deebbaed-eaff-46ef-a648-332bdf4cf58a)
 
 Base layout template bundled with [Bootstrap](https://github.com/apnet/bootstrap), [jQuery](https://github.com/apnet/jquery) and [html5shiv](https://github.com/apnet/html5shiv)
 
