@@ -24,7 +24,7 @@ class TwigTest extends WebTestCase
    */
   public function testTemplate()
   {
-    $template = $this->_getTwig()
+    $template = $this->getTwig()
       ->loadTemplate("ApnetLayoutBundle::body.html.twig");
     /* @var $template \Twig_Template */
     $content = $template->render(array());
@@ -42,7 +42,7 @@ class TwigTest extends WebTestCase
    */
   public function testBlock($name)
   {
-    $template = $this->_getTwig()
+    $template = $this->getTwig()
       ->loadTemplate("ApnetLayoutBundle::body.html.twig");
     /* @var $template \Twig_Template */
 
@@ -77,7 +77,7 @@ class TwigTest extends WebTestCase
    *
    * @return \Twig_Environment
    */
-  private function _getTwig()
+  private function getTwig()
   {
     $client = self::createClient();
     $container = $client->getContainer();
@@ -86,5 +86,4 @@ class TwigTest extends WebTestCase
 
     return $container->get('twig');
   }
-
 }
