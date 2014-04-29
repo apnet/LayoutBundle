@@ -1,5 +1,4 @@
 *~
-.idea
 .vagrant
 app/cache
 app/logs
