@@ -1,6 +1,0 @@
-services:
-    # Twig extension for README.md on /
-    apnet.dev.twig_extension:
-        class: Apnet\Dev\TwigExtension
-        tags:
-            - { name: twig.extension }

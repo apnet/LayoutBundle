@@ -1,5 +1,4 @@
 imports:
-#    - { resource: parameters.yml }
     - { resource: services.yml }
 
 monolog:
@@ -33,3 +32,7 @@ twig:
 # Assetic Configuration
 assetic:
     use_controller: %kernel.debug%
+
+covex_twig_callable_bridge:
+    functions:
+       file_get_contents: file_get_contents
