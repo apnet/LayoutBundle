@@ -81,8 +81,9 @@ class TwigTest extends WebTestCase
   {
     $client = self::createClient();
     $container = $client->getContainer();
-    $container->enterScope('request');
-    $container->set('request', new Request(), 'request');
+
+    $request = $container->get('request_stack');
+    $container->set('request', $request);
 
     return $container->get('twig');
   }
