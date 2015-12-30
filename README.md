@@ -13,7 +13,7 @@ Add requirements to composer.json:
 ``` json
 {
   "require" : {
-    "apnet/layout-bundle" : "~3.0"
+    "apnet/layout-bundle" : "~3.1"
   }
 }
 ```

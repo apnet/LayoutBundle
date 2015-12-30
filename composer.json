@@ -22,7 +22,6 @@
     "autoload" : {
         "psr-0" : { "Apnet\\" : "src/" }
     },
-    "minimum-stability" : "beta",
     "extra" : {
         "symfony-app-dir" : "app",
         "symfony-web-dir" : "web",
